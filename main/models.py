@@ -5,9 +5,10 @@ from users.models import User
 
 
 class Habit(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True, verbose_name='пользователь')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True,
+                             verbose_name='пользователь')
     place = models.CharField(max_length=50, verbose_name='место')
-    hours = models.IntegerField(verbose_name='часы')      # поля hours и minutes нужны для более удобного
+    hours = models.IntegerField(verbose_name='часы')  # поля hours и minutes нужны для более удобного
     minutes = models.IntegerField(verbose_name='минуты')  # ввода времени пользователем
     time = models.TimeField(verbose_name='время', null=True, blank=True)
     action = models.CharField(max_length=60, verbose_name='действие')
@@ -19,6 +20,8 @@ class Habit(models.Model):
     reward = models.CharField(max_length=30, null=True, blank=True, verbose_name='вознаграждение')
     duration = models.IntegerField(verbose_name='продолжительность')
     is_public = models.BooleanField(default=False, verbose_name='признак публичности')
+    last_sending_datetime = models.DateTimeField(default=None, null=True, blank=True,
+                                                 verbose_name='дата и время последней отправки')
 
     def __str__(self):
         return f"Я буду {self.action} в {self.hours} часов {self.minutes} минут в {self.place}"
