@@ -20,6 +20,7 @@ eventlet = "^0.33.3"
 django-celery-beat = "^2.5.0"
 notifiers = "^1.3.3"
 django-cors-headers = "^4.3.1"
+coverage = "^7.3.2"
 
 
 [build-system]
