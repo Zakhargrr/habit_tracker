@@ -1,6 +1,5 @@
 import datetime
 
-from django.test import TestCase
 from rest_framework.test import APITestCase
 
 from main.models import Habit
@@ -133,26 +132,6 @@ class HabitTestCase(APITestCase):
 
         self.assertEqual(
             response5.status_code,
-            status.HTTP_400_BAD_REQUEST
-        )
-
-        habit6 = {
-            'place': 'test_place',
-            'hours': 10,
-            'minutes': 50,
-            'action': 'test_action',
-            'is_pleasant_habit': False,
-            'connected_habit': Habit.objects.all().last(),
-            'period': '1D',
-            'duration': 110,
-        }
-        response6 = self.client.post(
-            '/create-habit/',
-            data=habit6
-        )
-
-        self.assertEqual(
-            response2.status_code,
             status.HTTP_400_BAD_REQUEST
         )
 

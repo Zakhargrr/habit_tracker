@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework import viewsets
 
 from users.models import User
@@ -14,4 +13,3 @@ class UserViewSet(viewsets.ModelViewSet):
         password = new_user.password
         new_user.set_password(password)
         new_user.save()
-

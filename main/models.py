@@ -1,8 +1,6 @@
 from config import settings
 from django.db import models
 
-from users.models import User
-
 
 class Habit(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True, blank=True,
