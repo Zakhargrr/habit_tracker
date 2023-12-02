@@ -1,4 +1,3 @@
-import os
 from datetime import datetime, timedelta
 
 from celery import shared_task
@@ -21,7 +20,7 @@ def form_message(hours, minutes, action, duration, connected_habit, reward):
 @shared_task
 def send_tg_message(chat_id, message):
     telegram = get_notifier('telegram')
-    telegram.notify(token=os.getenv('TG_BOT_TOKEN'), chat_id=chat_id, message=message)
+    telegram.notify(token='6426747398:AAG5E57DAbDSgBqsSh5HEKfzmDhrizyZWx4', chat_id=chat_id, message=message)
 
 
 def check_time_and_timedelta(habit):

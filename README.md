@@ -26,5 +26,9 @@ Python, Django, DRF, PostgreSQL, Celery, Redis
 - `/update-habit/<int:pk>/` - PUT- или PATCH-запрос редактирования привычки
 - `/delete-habit/<int:pk>/` - DELETE-запрос удаления привычки
 
+
+### Инструкция по разверьыванию приложения
+При установленном Docker введите команду `docker-compose up --build`
+
 ### Автор проекта
 Гранкин Захар
