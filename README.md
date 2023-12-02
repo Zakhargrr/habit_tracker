@@ -20,9 +20,5 @@ Python, Django, DRF, PostgreSQL, Celery, Redis
 - `/update-habit/<int:pk>/` - PUT- или PATCH-запрос редактирования привычки
 - `/delete-habit/<int:pk>/` - DELETE-запрос удаления привычки
 
-
-### Инструкция по развертыванию проекта
-
-
 ### Автор проекта
 Гранкин Захар
