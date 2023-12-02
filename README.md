@@ -27,7 +27,7 @@ Python, Django, DRF, PostgreSQL, Celery, Redis
 - `/delete-habit/<int:pk>/` - DELETE-запрос удаления привычки
 
 
-### Инструкция по разверьыванию приложения
+### Инструкция по развертыванию проекта
 При установленном Docker введите команду `docker-compose up --build`
 
 ### Автор проекта
